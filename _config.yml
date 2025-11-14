@@ -1,0 +1,156 @@
+# 网站基本信息
+title: "韩迪教授个人主页"
+description: "广东金融学院国家金融学学院韩迪教授的个人主页，专注于人工智能、推荐系统、数字经济和大模型优化研究"
+author: "韩迪"
+email: "handi@gduf.edu.cn"
+
+# 网址设置
+url: "https://handi.github.io"  # 请替换为您的实际GitHub用户名
+baseurl: ""
+
+# 搜索引擎优化
+keywords: "韩迪, 人工智能, 推荐系统, 数字经济, 大模型优化, 广东金融学院, 教授, 学术研究"
+
+# 社交媒体链接
+social:
+  github: "https://github.com/handi"
+  email: "handi@gduf.edu.cn"
+  # linkedin: "https://linkedin.com/in/handi"
+  # twitter: "https://twitter.com/handi"
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - package.json
+  - package-lock.json
+
+# 包含文件
+include:
+  - _pages
+
+# 分页
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# 默认值
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# 文档集合
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# 压缩
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+# 开发环境设置
+livereload: true
+incremental: false
+
+# 时间格式
+timezone: Asia/Shanghai
+future: true
+show_drafts: false
+
+# 语言设置
+lang: zh-CN
+encoding: utf-8
+
+# GitHub元数据
+github: [metadata]
+
+# SEO设置
+twitter:
+  username: handi
+  card: summary
+
+facebook:
+  app_id: ""
+  publisher: ""
+  admins: ""
+
+# 网站地图
+sitemap:
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
+
+# 谷歌分析（如果需要）
+# google_analytics: "UA-XXXXX-X"
+
+# 百度统计（如果需要）
+# baidu_analytics: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+# 联系信息
+contact:
+  email: "handi@gduf.edu.cn"
+  address: "广州市天河区迎福路527号"
+  institution: "广东金融学院国家金融学学院"
+  phone: "+86-20-XXXXXXXX"
+
+# 教育背景
+education:
+  - degree: "博士"
+    field: "计算机技术及其应用"
+    institution: "澳门科技大学"
+    year: "2014-2018"
+  - degree: "硕士"
+    field: "计算机软件与理论"
+    institution: "中山大学"
+    year: "2006-2009"
+  - degree: "本科"
+    field: "计算机科学与技术"
+    institution: "湖北工业大学"
+    year: "2000-2004"
+
+# 研究兴趣
+research_interests:
+  - "人工智能"
+  - "推荐系统"
+  - "数字经济"
+  - "大模型优化"
+  - "金融科技"
+
+# 教授课程
+courses:
+  - "Python程序设计"
+  - "Python数据分析"
+  - "金融风险模型编程"
+  - "大语言模型应用"

@@ -1,0 +1,887 @@
+/* 学术风格个人主页样式 - 优化版 */
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* 链接样式 */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* 布局容器 */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* 导航栏 */
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar {
+    padding: 15px 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* 侧边栏 */
+.sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+}
+
+.profile {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em;
+    border: 4px solid #f8f9fa;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #000;
+}
+
+.title {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+.institution {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1.5em;
+    line-height: 1.4;
+}
+
+/* 联系信息 */
+.contact-info {
+    text-align: left;
+    margin-bottom: 1.5em;
+    font-size: 0.9em;
+}
+
+.contact-info p {
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.contact-info i {
+    width: 20px;
+    color: #666;
+}
+
+.contact-info a {
+    color: #007bff;
+}
+
+/* 社交链接 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* 研究兴趣和教育背景 */
+.interests,
+.education {
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.interests h3,
+.education h3 {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    color: #000;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5em;
+}
+
+.interests ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interests li {
+    padding: 0.3em 0;
+    color: #666;
+}
+
+.interests li:before {
+    content: "▪";
+    color: #007bff;
+    margin-right: 0.5em;
+}
+
+.edu-item {
+    margin-bottom: 1.2em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid #eee;
+}
+
+.edu-last {
+    border-bottom: none;
+}
+
+.edu-degree {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.2em;
+}
+
+.edu-school {
+    color: #666;
+    margin-bottom: 0.2em;
+}
+
+.edu-date {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.edu-major {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+/* 主内容区 */
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.content-section {
+    margin-bottom: 3em;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    color: #000;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5em;
+}
+
+.section-content {
+    margin-bottom: 2em;
+}
+
+.section-content p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/* 新闻列表 */
+.news-list {
+    margin-top: 1.5em;
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+}
+
+.news-date {
+    min-width: 80px;
+    font-weight: 600;
+    color: #007bff;
+    margin-right: 1em;
+}
+
+.news-item p {
+    margin: 0;
+    color: #666;
+}
+
+/* 论文样式 */
+.publication {
+    margin-bottom: 2em;
+    padding: 2em;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.publication:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.pub-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #000;
+    line-height: 1.3;
+}
+
+.pub-authors {
+    color: #666;
+    margin-bottom: 0.3em;
+}
+
+.pub-venue {
+    font-style: italic;
+    color: #007bff;
+    margin-bottom: 0.3em;
+}
+
+.pub-type {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 0.2em 0.6em;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.pub-link:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+/* 项目样式 */
+.project {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    border-radius: 0 8px 8px 0;
+}
+
+.project-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #000;
+    line-height: 1.3;
+}
+
+.project-period {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 教学样式 */
+.course-list,
+.achievement-list,
+.thesis-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+.course-list li,
+.achievement-list li,
+.thesis-list li {
+    padding: 0.8em 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.course-list li:last-child,
+.achievement-list li:last-child,
+.thesis-list li:last-child {
+    border-bottom: none;
+}
+
+/* 学生样式 */
+.student-list {
+    margin-bottom: 2em;
+}
+
+.student-item {
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.student-item p {
+    margin: 0;
+}
+
+.student-item p:first-child {
+    font-weight: 600;
+    color: #000;
+}
+
+.student-item p:last-child {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 0.3em;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.8em 1.5em;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.view-more {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* 教材样式 */
+.textbook-list {
+    margin-bottom: 2em;
+}
+
+.textbook-item {
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    border-radius: 0 8px 8px 0;
+}
+
+.textbook-item p {
+    margin-bottom: 0.5em;
+}
+
+.textbook-item p:first-child {
+    font-weight: 600;
+    color: #000;
+}
+
+.textbook-item p:last-child {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 学生科研成果 */
+.student-research {
+    margin-bottom: 2em;
+}
+
+.research-item {
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.research-item p:first-child {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+.research-item p:nth-child(2) {
+    color: #007bff;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.student-names {
+    color: #666;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* 竞赛获奖 */
+.competition-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+.competition-list li {
+    padding: 0.8em 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.competition-list li:last-child {
+    border-bottom: none;
+}
+
+/* 招生信息 */
+.recruitment-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.area-item {
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.area-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.area-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.area-item li {
+    padding: 0.5em 0;
+    color: #666;
+}
+
+.area-item li:before {
+    content: "▪";
+    color: #007bff;
+    margin-right: 0.5em;
+}
+
+/* 招生要求 */
+.requirements {
+    margin-bottom: 2em;
+}
+
+.requirement-item {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.requirement-item i {
+    color: #007bff;
+    font-size: 1.2em;
+    margin-top: 0.2em;
+    min-width: 20px;
+}
+
+.requirement-item p:first-child {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.3em;
+}
+
+.requirement-item p:last-child {
+    margin-bottom: 0;
+    color: #666;
+}
+
+/* 联系方式 */
+.contact-cta {
+    padding: 2em;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #007bff;
+}
+
+.contact-cta h3 {
+    color: #007bff;
+    margin-bottom: 1em;
+}
+
+.contact-cta p {
+    margin-bottom: 0.5em;
+}
+
+.contact-cta p:last-child {
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* 页脚 */
+.site-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e8e8e8;
+    padding: 2em 0;
+    margin-top: 4em;
+    text-align: center;
+}
+
+.site-footer p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.site-footer a {
+    color: #007bff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+    
+    .profile {
+        margin-bottom: 2em;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .publication {
+        padding: 1.5em;
+    }
+    
+    .project {
+        padding: 1em;
+    }
+    
+    .recruitment-areas {
+        grid-template-columns: 1fr;
+    }
+    
+    .wrapper {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .publication {
+        padding: 1em;
+    }
+    
+    .project {
+        padding: 1em;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 焦点样式 */
+a:focus,
+button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+}
+
+th,
+td {
+    padding: 0.8em;
+    text-align: left;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* 代码样式 */
+code {
+    background-color: #f8f9fa;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    border: 1px solid #e8e8e8;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* 引用样式 */
+blockquote {
+    margin: 1.5em 0;
+    padding: 0.5em 1.5em;
+    border-left: 4px solid #007bff;
+    background-color: #f8f9fa;
+    color: #666;
+    font-style: italic;
+}
+
+/* 加载状态 */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* 错误状态 */
+.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+}
+
+/* 成功状态 */
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid #c3e6cb;
+}
+
+/* 论文列表样式 */
+.publications-list {
+    margin-top: 2em;
+    padding: 2em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.pub-year-section {
+    margin-bottom: 2em;
+}
+
+.year-header {
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #007bff;
+}
+
+.year-header h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #007bff;
+    margin: 0;
+}
+
+.pub-year-content {
+    margin-left: 1em;
+}
+
+.compact-pub {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    background-color: white;
+    border-radius: 6px;
+    border-left: 3px solid #e3f2fd;
+    transition: all 0.3s ease;
+}
+
+.compact-pub:hover {
+    border-left-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateX(2px);
+}
+
+.pub-title-compact {
+    font-weight: 500;
+    color: #333;
+    line-height: 1.3;
+}
+
+.pub-venue-compact {
+    font-style: italic;
+    color: #007bff;
+    font-size: 0.9em;
+}
+
+.pub-type-compact {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 0.2em 0.6em;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+    align-self: flex-start;
+}

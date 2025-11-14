@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 创建简单的学术主题favicon
+        ctx.fillStyle = '#007bff';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 16px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('H', 16, 16);
+        
+        // 导出为base64（这里只是示例，实际需要生成真正的favicon文件）
+        console.log('Favicon created');
+    </script>
+</body>
+</html>
