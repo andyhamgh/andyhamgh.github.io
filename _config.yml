@@ -2,10 +2,10 @@
 title: "韩迪教授个人主页"
 description: "广东金融学院国家金融学学院韩迪教授的个人主页，专注于人工智能、推荐系统、数字经济和大模型优化研究"
 author: "韩迪"
-email: "handi@gduf.edu.cn"
+email: "dihan@gduf.edu.cn"
 
 # 网址设置
-url: "https://handi.github.io"  # 请替换为您的实际GitHub用户名
+url: "https://andyhamgh.github.io"  # 请替换为您的实际GitHub用户名
 baseurl: ""
 
 # 搜索引擎优化
@@ -13,10 +13,9 @@ keywords: "韩迪, 人工智能, 推荐系统, 数字经济, 大模型优化, �
 
 # 社交媒体链接
 social:
-  github: "https://github.com/handi"
-  email: "handi@gduf.edu.cn"
-  # linkedin: "https://linkedin.com/in/handi"
-  # twitter: "https://twitter.com/handi"
+  github: "https://github.com/andyhamgh"
+  email: "dihan@gduf.edu.cn"
+
 
 # 构建设置
 markdown: kramdown
@@ -99,7 +98,7 @@ github: [metadata]
 
 # SEO设置
 twitter:
-  username: handi
+  username: dihan
   card: summary
 
 facebook:
@@ -112,18 +111,14 @@ sitemap:
   change_frequency_name: "change_frequency"
   priority_name: "priority"
 
-# 谷歌分析（如果需要）
-# google_analytics: "UA-XXXXX-X"
 
-# 百度统计（如果需要）
-# baidu_analytics: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 # 联系信息
 contact:
-  email: "handi@gduf.edu.cn"
+  email: "dihan@gduf.edu.cn"
   address: "广州市天河区迎福路527号"
   institution: "广东金融学院国家金融学学院"
-  phone: "+86-20-XXXXXXXX"
+
 
 # 教育背景
 education:
